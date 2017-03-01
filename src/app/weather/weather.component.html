@@ -1,0 +1,49 @@
+<div class="large-12 columns">
+	<form>
+		<div class="large-10 columns">
+            <h5>Enter City</h5>
+			<input type="text" name="city" [(ngModel)]="city" placeholder=" Enter your city here (e.g: New York)  "/> <br />
+		</div>
+		<div class="large-2 columns">
+			<button class="button postfix" (click)="searchCurrentWeatherByCity(city)">
+				<i class="fa fa-search-plus"></i> Go
+			</button>
+		</div>	
+	</form>
+</div>
+
+<div class="large-10 columns">
+
+<table>
+  <tr>
+    <td align="right">Current Weather: </td>
+    <td align="left">{{currentWeatherMain}}, {{currentWeatherDescription}}</td>
+  </tr>
+  <tr>
+    <td align="right">Last Reading: </td>
+    <td align="left">{{lastReading * 1000 | date: 'mm/dd/yyyy hh:mm:ss'}}</td>
+  </tr>
+  <tr>
+    <td align="right">Temperature: </td>
+    <td align="left">{{temp}} &deg;C</td>
+  </tr>
+  <tr>
+    <td align="right">Humidity: </td>
+    <td align="left">{{humidity}}  &#37;</td>
+  </tr>
+  <tr>
+    <td align="right">Sunset: </td>
+    <td align="left">{{sunset * 1000 | date: 'mm/dd/yyyy hh:mm:ss'}}</td>
+  </tr>
+  <tr>
+    <td align="right">Sunrise: </td>
+    <td align="left">{{sunrise * 1000 | date: 'mm/dd/yyyy hh:mm:ss'}}</td>
+  </tr>
+</table>
+</div>
+
+<div>
+    <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+</div>
+
+

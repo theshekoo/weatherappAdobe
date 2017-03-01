@@ -6,8 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+
 import { ApiService } from './shared';
 import { routing } from './app.routing';
+
+import { SidebarModule } from 'ng-sidebar';
+import {NglModule} from 'ng-lightning/ng-lightning';
+
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
@@ -16,12 +23,16 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BrowserModule,
     HttpModule,
     FormsModule,
-    routing
+    routing,
+    SidebarModule,
+    NglModule.forRoot()
   ],
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    WeatherComponent,
+    BreadcrumbComponent
   ],
   providers: [
     ApiService
