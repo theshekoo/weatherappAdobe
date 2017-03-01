@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { WeatherComponent } from './weather/weather.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 import { ApiService } from './shared';
 import { routing } from './app.routing';
@@ -32,7 +33,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     HomeComponent,
     AboutComponent,
     WeatherComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SpinnerComponent
   ],
   providers: [
     ApiService

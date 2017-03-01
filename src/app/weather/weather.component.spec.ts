@@ -5,8 +5,8 @@ import { TestBed } from '@angular/core/testing';
 
 import { WeatherComponent } from './weather.component';
 
-describe('Home Component', () => {
-  const html = '<my-home></my-home>';
+describe('Weather Component', () => {
+  const html = '<weather></weather>';
 
   beforeEach(() => {
     TestBed.configureTestingModule({declarations: [WeatherComponent, TestComponent]});
@@ -16,7 +16,7 @@ describe('Home Component', () => {
   it('should ...', () => {
     const fixture = TestBed.createComponent(TestComponent);
     fixture.detectChanges();
-    expect(fixture.nativeElement.children[0].textContent).toContain('Home Works!');
+    expect(fixture.nativeElement.children[0].textContent).toContain('Weather Works!');
   });
 
 });

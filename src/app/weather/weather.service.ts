@@ -11,12 +11,15 @@ export class WeatherService{
 
  private baseUrl='http://api.openweathermap.org/data/2.5/';
 
-    constructor(private http : Http){}
+    constructor(private http : Http){
+
+         
+    }
  
     getWeatherByZip(zip:string){
        	 return this.http.get(this.baseUrl +'weather?zip='+ zip +'&appid='+ APPID +'&units=metric')
     	 .map(response => response.json()
-         
+         .catch()
          );
     }
 
@@ -25,4 +28,5 @@ export class WeatherService{
     	 .map(response => response.json());
     }
 
+   
 }
